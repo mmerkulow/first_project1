@@ -15,7 +15,7 @@ class TestAPIWeather(unittest.TestCase):
 
     def test_validate_request_without_authenticate_header(self):
         self.api_utils.headers.pop('X-BLOBR-KEY')
-        content = self.api_utils.get_weather(latitude=46.486, longitude=30.741190215169848, expected_code=403)
+        content = self.api_utils.get_weather(latitude=46.486, longitude=30.741190215169852, expected_code=403)
 
     def test_validate_weather_date(self):
         content = self.api_utils.get_weather(latitude=46.486, longitude=30.741190215169848)
